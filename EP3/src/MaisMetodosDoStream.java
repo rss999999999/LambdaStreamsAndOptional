@@ -38,7 +38,12 @@ public class MaisMetodosDoStream {
                 .map(i -> i*i) //aplica uma função (multiplica por dois) em cada elemento (operação intermediária)
                 .distinct() //remove os elementos duplicados (operação intermediária)
                 .limit(3) //limita a quantidade de elementos a serem processados (operação intermediária)
-                .forEach(System.out::println); //imprime todos os números da lista
+
+                .count().peek(System.out::println); //imprime todos os números da lista
+
+//                .forEach(i -> System.out.println()); //imprime todos os números da lista
+
+
 
     }
 }
